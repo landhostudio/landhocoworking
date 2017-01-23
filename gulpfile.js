@@ -21,7 +21,7 @@ var browserSync   = require('browser-sync').create(),
 
 // Url -------------------------------------------------------------------------
 
-var url           = 'http://landhostarter.dev/';
+var url           = 'http://landhocoworking.dev/';
 
 // Paths -----------------------------------------------------------------------
 
