@@ -1,0 +1,24 @@
+{
+  "name": "landhostarter",
+  "version": "1.0.0",
+  "description": "Theme starter for new project base on WordPress",
+  "private": true,
+  "author": "Roman Horokhovatskyy",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-flatten": "^0.3.1",
+    "gulp-include": "^2.3.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.0",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2",
+    "run-sequence": "^1.2.2",
+    "webpack-stream": "^3.2.0"
+  }
+}

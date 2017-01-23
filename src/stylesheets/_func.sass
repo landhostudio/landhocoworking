@@ -1,0 +1,7 @@
+// Em’s | usage: em-calc(320) = 20em
+@function em-calc($px)
+  @return ($px / 16) * 1em
+
+// Rem’s | usage: rem-calc(320) = 20rem
+@function rem-calc($px)
+  @return ($px / 16) * 1rem

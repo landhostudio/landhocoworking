@@ -1,0 +1,15 @@
+.hidden
+  position: absolute
+  left: -999em
+
+.container
+  margin-right: auto
+  margin-left: auto
+  padding-right: $padding
+  padding-left: $padding
+  
+  @include media($screen-sm-min)
+    max-width: $screen-sm-min
+
+  @include media($screen-md-min)
+    max-width: $screen-md-min
