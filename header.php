@@ -16,7 +16,7 @@
 
       <?php if (has_nav_menu('menu')): ?>
         <nav role="navigation">
-          <h2><?php esc_html_e('Menu', 'landhostarter'); ?></h2>
+          <h2><?php esc_html_e('Menu', 'landhocoworking'); ?></h2>
 
           <?php wp_nav_menu(array(
             'theme_location' => 'menu',

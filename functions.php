@@ -1,8 +1,8 @@
 <?php
 
-  if (!function_exists('landhostarter_setup')) {
+  if (!function_exists('landhocoworking_setup')) {
 
-    function landhostarter_setup() {
+    function landhocoworking_setup() {
       
       // Let WordPress manage the document title -------------------------------
 			
@@ -41,4 +41,4 @@
     }
 
   }
-  add_action('after_setup_theme', 'landhostarter_setup');
+  add_action('after_setup_theme', 'landhocoworking_setup');
