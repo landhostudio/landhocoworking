@@ -21,12 +21,9 @@
       // Load the assets -------------------------------------------------------
 			
 			function init_assets() {
-
-        wp_enqueue_style('all-css', get_template_directory_uri() . '/dist/css/all.css', true, '1.0', false);
-
-        wp_register_script('all-js', get_template_directory_uri() . '/dist/js/all.js', array(), '1.0', true);
-        wp_enqueue_script('all-js');
-
+        wp_enqueue_style('all-css', get_template_directory_uri() . '/dist/css/all.css', array(), '1.0.0');
+        wp_enqueue_script('plugins', get_template_directory_uri() . '/dist/js/plugins.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('scripts', get_template_directory_uri() . '/dist/js/scripts.js', array('jquery'), '1.0.0', true);
 			}
 			add_action('wp_enqueue_scripts', 'init_assets');
       
@@ -38,7 +35,10 @@
       
       get_template_part('inc/soil');
       
+      // ACF -------------------------------------------------------------------
       get_template_part('inc/acf-gravity-forms/acf-gravity_forms');
+      get_template_part('inc/acf');
+      
     }
 
   }
