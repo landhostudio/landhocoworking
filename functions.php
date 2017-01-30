@@ -40,6 +40,17 @@
       add_filter('gform_display_add_form_button', function() { return false; });
 
       // ACF -------------------------------------------------------------------
+
+      if (function_exists('acf_add_options_page')) {
+
+        acf_add_options_page(array(
+      		'page_title' 	=> 'Opzioni',
+      		'menu_title'	=> 'Opzioni',
+      		'menu_slug' 	=> 'theme-options'
+      	));
+        
+      }
+
       get_template_part('inc/acf-gravity-forms/acf-gravity_forms');
       get_template_part('inc/acf');
       
