@@ -38,6 +38,7 @@
       
       get_template_part('inc/soil');
       
+      get_template_part('inc/acf-gravity-forms/acf-gravity_forms');
     }
 
   }
