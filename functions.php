@@ -35,6 +35,10 @@
       
       get_template_part('inc/soil');
       
+      // Remove Gravity Forms Add button ---------------------------------------
+      
+      add_filter('gform_display_add_form_button', function() { return false; });
+
       // ACF -------------------------------------------------------------------
       get_template_part('inc/acf-gravity-forms/acf-gravity_forms');
       get_template_part('inc/acf');
