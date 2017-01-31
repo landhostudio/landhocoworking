@@ -14,14 +14,29 @@
         <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></span></a>
       </h1>
 
-      <?php if (has_nav_menu('menu')): ?>
+      <?php if (has_nav_menu('header')): ?>
         <nav role="navigation">
-          <h2><?php esc_html_e('Menu', 'landhocoworking'); ?></h2>
+          <h2 class="hidden"><?php esc_html_e('Header menu', 'landhocoworking'); ?></h2>
 
-          <?php wp_nav_menu(array(
-            'theme_location' => 'menu',
-            'items_wrap' => '%3$s'
-          )); ?>
+          <ul>
+            <?php wp_nav_menu(array(
+              'theme_location' => 'header',
+              'items_wrap' => '%3$s'
+            )); ?>
+          </ul>
         </nav>
       <?php endif; ?>
+      
+      <div class="header__info">
+
+        <?php if (get_field('options_phone', option)): ?>
+          <a href="tel:<?php the_field('options_phone', option); ?>"><?php the_field('options_phone', option); ?></a>
+        <?php endif; ?>
+        
+        <?php if (get_field('options_contact', option)): ?>
+          <a href="<?php the_field('options_contact', option); ?>"><?php esc_html_e('Prenota', 'landhocoworking'); ?></a>
+        <?php endif; ?>
+
+      </div>
+
     </header>

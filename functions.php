@@ -15,7 +15,9 @@
 			// Enables dynamic navigation --------------------------------------------
 
       register_nav_menus( array(
-				'menu' => 'Menu'
+				'header' => 'Header',
+        'footer' => 'Footer',
+        'social' => 'Social'
 			));
 
       // Load the assets -------------------------------------------------------
