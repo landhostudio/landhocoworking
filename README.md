@@ -11,6 +11,12 @@ Official Land Ho – Coworking WordPress theme
 5. Build project assets running `gulp`
 6. Open watch server with run `gulp watch`
 
+## Plugins
+
+1. [ACF](https://www.advancedcustomfields.com/)
+2. [Gravity Forms](http://www.gravityforms.com/)
+3. [W3 Total Cache](https://www.w3-edge.com/products/w3-total-cache/)
+
 ## License
 
 This theme is copyrighted. Non autorizated modification (any of modification of the source code inside this theme folder) of this theme is strongly prohibited.
