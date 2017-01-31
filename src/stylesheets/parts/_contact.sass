@@ -1,0 +1,101 @@
+.contact
+  &__form
+
+    background-color: $color-4
+    box-shadow: $shadow
+    padding: em-calc(24)
+
+    h3
+      @extend .h2
+
+      + span
+        display: block
+        font-size: em-calc(14)
+
+    &__name,
+    &__email,
+    &__phone
+      margin-bottom: em-calc(16)
+
+      label
+        position: absolute
+        left: -999em
+
+      input
+        @extend .input
+
+    &__name
+    &__email
+    &__phone
+    &__choise,
+    &__check
+
+      label
+        display: block
+        margin-bottom: em-calc(16)
+
+      input[type=radio],
+      input[type=checkbox]
+        position: absolute
+        left: -999em
+
+        + label
+          display: flex
+
+          &:hover
+            cursor: pointer
+
+          &:before
+            content: ''
+            display: inline-block
+            border: em-calc(1) solid lighten($color-1, 70%)
+            border-radius: 50%
+            margin-right: em-calc(8)
+            width: em-calc(24)
+            height: em-calc(24)
+
+        &:checked
+          + label
+            &:before
+              border-color: lighten($color-1, 70%)
+              background-color: lighten($color-1, 70%)
+
+      input[type=checkbox]
+        + label
+          &:before
+            border-radius: em-calc(3)
+
+    ul
+      list-style: none
+      padding-left: 0
+      margin-top: em-calc(24)
+      margin-bottom: em-calc(24)
+
+    .validation_error
+      display: none
+
+    .gfield_error
+      input
+        border-color: lighten(red, 25%)
+        background-color: lighten(red, 49.5%)
+
+    .gfield_description
+      position: absolute
+      left: -999em
+
+    .button
+      width: 100%
+
+  &__map
+    position: relative
+    padding-bottom: per-width(16,9)
+
+    &__object
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+      img
+        max-width: inherit !important

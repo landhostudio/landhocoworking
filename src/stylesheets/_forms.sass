@@ -1,0 +1,47 @@
+button, input
+  font-family: $font-form
+  line-height: $font-form-line-height
+
+.button
+  display: inline-block
+  font-size: em-calc(14)
+  font-weight: $font-form-weight
+  text-align: center
+  white-space: nowrap
+  padding: rem-calc(8) rem-calc(24)
+  background-color: $color-1
+  background-image: none
+  height: $font-form-height
+  color: $color-4
+  text-transform: uppercase
+  letter-spacing: em-calc(1)
+  border: em-calc(1) solid $color-1
+  border-radius: 0
+  vertical-align: middle
+  cursor: pointer
+  user-select: none
+  touch-action: manipulation
+
+  &:focus
+    outline: 0
+  
+  &:focus,
+  &:hover
+    opacity: 0.85
+
+.input
+  display: block
+  width: 100%
+  height: $font-form-height
+  padding: em-calc(16) em-calc(24)
+  font-size: em-calc(14)
+  line-height: $font-form-line-height
+  color: $color-1
+  background-color: $color-4
+  background-image: none
+  border: em-calc(1) solid lighten($color-1, 70%)
+  border-radius: em-calc(3)
+
+  &:focus
+    outline: 0
+    border-color: $color-1

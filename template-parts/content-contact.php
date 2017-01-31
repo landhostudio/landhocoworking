@@ -12,6 +12,14 @@
     <div class="columns">
       <div class="column-4">
 
+        <?php
+          $form_object = get_field('contact_form');
+          if ($form_object):
+        ?>
+          <div class="contact__form">
+            <?php echo do_shortcode('[gravityform id="' . $form_object['id'] . '" title="true" description="true" ajax="true"]'); ?>
+          </div>
+        <?php endif; ?>
 
       </div>
 
