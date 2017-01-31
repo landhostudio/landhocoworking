@@ -50,7 +50,6 @@ gulp.task('css', function() {
     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(combineMq())
     .pipe(csscomb())
-    .pipe(cssnano())
     .pipe(gulp.dest(destination + '/css'))
     .pipe(browserSync.stream());
 });
@@ -60,7 +59,6 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src([source + '/scripts/**/*.js'])
     .pipe(include())
-    .pipe(uglify())
     .pipe(gulp.dest(destination + '/js'))
     .pipe(browserSync.stream());
 });
