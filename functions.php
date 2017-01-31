@@ -42,6 +42,10 @@
       
       get_template_part('inc/soil');
       
+      // Menu walker -----------------------------------------------------------
+      
+      get_template_part('inc/menu');
+      
       // Remove Gravity Forms Add button ---------------------------------------
       
       add_filter('gform_display_add_form_button', function() { return false; });

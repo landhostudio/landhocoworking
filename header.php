@@ -21,7 +21,8 @@
           <ul>
             <?php wp_nav_menu(array(
               'theme_location' => 'header',
-              'items_wrap' => '%3$s'
+              'items_wrap' => '%3$s',
+              'walker' => new walkerHeaderMenu()
             )); ?>
           </ul>
         </nav>
