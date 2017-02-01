@@ -1,8 +1,8 @@
     <footer role="contentinfo" class="footer">
       
-      <h1>
+      <h2>
         <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></span></a>
-      </h1>
+      </h2>
       
       <?php if (has_nav_menu('footer') || has_nav_menu('social')): ?>
         <nav role="navigation">
