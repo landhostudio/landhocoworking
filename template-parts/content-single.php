@@ -18,9 +18,9 @@
     <?php the_content(); ?>
   </div>
   
-  <footer class="single__share">
+  <aside class="single__share">
     <h3 class="h4"><?php esc_html_e('Se ti piace condividi', 'landhocoworking'); ?></h3>
-    
+
     <p>
 
       <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" target="_blank" rel="nofollow" class="single__share__facebook">
@@ -37,6 +37,17 @@
 
     </p>
 
-  </footer>
+  </aside>
+
+  <?php
+    $page_for_posts = get_option('page_for_posts');
+    if (get_field('posts_banner_if', $page_for_posts)):
+  ?>
+    <footer class="single__banner">
+      <h3 class="h1"><?php the_field('posts_banner_title', $page_for_posts); ?></h3>
+      <p class="lead"><?php the_field('posts_banner_text', $page_for_posts); ?></p>
+      <a href="<?php the_field('posts_banner_link', $page_for_posts); ?>" rel="bookmark" class="button"><?php esc_html_e('Altri contenuti', 'landhocoworking'); ?></a>
+    </footer>
+  <?php endif; ?>
 
 </article>
