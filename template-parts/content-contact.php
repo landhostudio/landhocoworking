@@ -3,10 +3,10 @@
   
     <header class="contact__header">
 
-      <h2><?php the_title(); ?></h2>
+      <h2 class="h1"><?php the_title(); ?></h2>
 
-      <?php if (get_field('lead')): ?>
-        <p><?php the_field('lead'); ?></p>
+      <?php if (get_field('page_lead')): ?>
+        <p class="lead"><?php the_field('page_lead'); ?></p>
       <?php endif; ?>
 
     </header>
