@@ -1,12 +1,18 @@
 <article class="location">
 
-  <?php the_post_thumbnail(); ?>
-
-  <h2 class="h1"><?php the_title(); ?></h2>
-
-  <?php if (get_field('page_lead')): ?>
-    <p class="lead"><?php the_field('page_lead'); ?></p>
+  <?php if (has_post_thumbnail()): ?>
+    <div class="location__cover">
+      <?php the_post_thumbnail('large'); ?>
+    </div>
   <?php endif; ?>
+
+  <div class="location__header">
+    <h2 class="h1"><?php the_title(); ?></h2>
+
+    <?php if (get_field('page_lead')): ?>
+      <p class="lead"><?php the_field('page_lead'); ?></p>
+    <?php endif; ?>
+  </div>
 
   <?php if (have_rows('location_gallery')): ?>
     <div class="location__gallery">
