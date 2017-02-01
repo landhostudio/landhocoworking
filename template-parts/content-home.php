@@ -4,6 +4,10 @@
 
   <h2><?php the_title(); ?></h2>
 
+  <?php if (get_field('lead')): ?>
+    <p><?php the_field('lead'); ?></p>
+  <?php endif; ?>
+
   <?php if (have_rows('home_board')): ?>
     <div class="home__board">
       <?php while (have_rows('home_board')): the_row(); ?>

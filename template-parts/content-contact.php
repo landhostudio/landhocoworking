@@ -2,11 +2,13 @@
   <div class="contact__container">
   
     <header class="contact__header">
+
       <h2><?php the_title(); ?></h2>
 
       <?php if (get_field('lead')): ?>
         <p><?php the_field('lead'); ?></p>
       <?php endif; ?>
+
     </header>
 
     <div class="columns">
