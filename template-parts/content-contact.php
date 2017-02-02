@@ -53,7 +53,7 @@
                   $informationtitle = get_sub_field('contact_information_title');
                   if ($informationtitle):
                 ?>
-                  <h4><?php the_sub_field('contact_information_title'); ?></h4>
+                  <h4 class="h3"><?php the_sub_field('contact_information_title'); ?></h4>
                 <?php endif; ?>
 
                 <?php the_sub_field('contact_information_body'); ?>
