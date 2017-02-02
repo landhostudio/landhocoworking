@@ -35,9 +35,7 @@
 
     <?php endif; ?>
 
-    <?php
-      while ($the_query->have_posts()): $the_query->the_post();
-    ?>
+    <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
 
       <?php if (($count % 4) == 0): ?>
         <?php get_template_part('template-parts/content', 'preview-large'); ?>
