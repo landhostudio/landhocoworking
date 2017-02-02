@@ -38,6 +38,14 @@
       
       if (!isset($content_width)) $content_width = 1280;
 
+      // SVG support -----------------------------------------------------------
+
+      function svg_upload($mimes) {
+        $mimes['svg'] = 'image/svg+xml';
+        return $mimes;
+      }
+      add_filter('upload_mimes', 'svg_upload');
+
       // Soil ------------------------------------------------------------------
       
       get_template_part('inc/soil');
