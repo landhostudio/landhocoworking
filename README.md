@@ -16,6 +16,10 @@ Official Land Ho – Coworking WordPress theme
 1. [ACF](https://www.advancedcustomfields.com/)
 2. [Gravity Forms](http://www.gravityforms.com/)
 3. [W3 Total Cache](https://www.w3-edge.com/products/w3-total-cache/)
+4. Post Types Order
+5. Soil
+6. WP Migrate DB
+5. Force Regenerate Thumbnails
 
 ## License
 
