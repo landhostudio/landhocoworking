@@ -54,6 +54,10 @@
       
       get_template_part('inc/menu');
       
+      // Custom Post Types -----------------------------------------------------
+
+      get_template_part('inc/plans');
+
       // Remove Gravity Forms Add button ---------------------------------------
       
       add_filter('gform_display_add_form_button', function() { return false; });
