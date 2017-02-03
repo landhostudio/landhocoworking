@@ -8,10 +8,16 @@
     <?php wp_head(); ?>
   </head>
   <body>
+    <?php echo file_get_contents(get_template_directory_uri() . '/dist/img/icons.svg'); ?>
 
     <header role="banner" class="header">
       <h1>
-        <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></span></a>
+        <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
+          <span class="hidden"><?php bloginfo('name'); ?></span>
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+          </svg>
+        </a>
       </h1>
 
       <?php if (has_nav_menu('header')): ?>

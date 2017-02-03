@@ -1,7 +1,12 @@
     <footer role="contentinfo" class="footer">
       
       <h2>
-        <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></span></a>
+        <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
+          <span class="hidden"><?php bloginfo('name'); ?></span>
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+          </svg>
+        </a>
       </h2>
       
       <?php if (has_nav_menu('footer') || has_nav_menu('social')): ?>
@@ -23,31 +28,46 @@
 
           <?php if (get_field('options_phone', option)): ?>
             <a href="tel:<?php the_field('options_phone', option); ?>">
-              <span><?php esc_html_e('Telefono', 'landhocoworking'); ?></span>
+              <span class="hidden"><?php esc_html_e('Telefono', 'landhocoworking'); ?></span>
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone"></use>
+              </svg>
             </a>
           <?php endif; ?>
 
           <?php if (get_field('options_email', option)): ?>
             <a href="mailto:<?php the_field('options_email', option); ?>">
-              <span><?php esc_html_e('Email', 'landhocoworking'); ?></span>
+              <span class="hidden"><?php esc_html_e('Email', 'landhocoworking'); ?></span>
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#email"></use>
+              </svg>
             </a>
           <?php endif; ?>
 
           <?php if (get_field('options_address', option)): ?>
             <a href="http://maps.google.com/maps?q=<?php the_field('options_address', option); ?>" target="_blank" rel="nofollow">
-              <span><?php esc_html_e('Indirizzo', 'landhocoworking'); ?></span>
+              <span class="hidden"><?php esc_html_e('Indirizzo', 'landhocoworking'); ?></span>
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location"></use>
+              </svg>
             </a>
           <?php endif; ?>
 
           <?php if (get_field('options_facebook', option)): ?>
             <a href="<?php the_field('options_facebook', option); ?>" target="_blank" rel="nofollow">
-              <span><?php esc_html_e('Facebook', 'landhocoworking'); ?></span>
+              <span class="hidden"><?php esc_html_e('Facebook', 'landhocoworking'); ?></span>
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+              </svg>
             </a>
           <?php endif; ?>
 
           <?php if (get_field('options_instagram', option)): ?>
             <a href="<?php the_field('options_instagram', option); ?>" target="_blank" rel="nofollow">
-              <span><?php esc_html_e('Instagram', 'landhocoworking'); ?></span>
+              <span class="hidden"><?php esc_html_e('Instagram', 'landhocoworking'); ?></span>
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use>
+              </svg>
             </a>
           <?php endif; ?>
 

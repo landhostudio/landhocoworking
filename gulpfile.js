@@ -16,6 +16,11 @@ var sass          = require('gulp-sass'),
 var include       = require('gulp-include'),
     uglify        = require('gulp-uglify');
 
+var cheerio       = require('gulp-cheerio'),
+    svgstore      = require('gulp-svgstore'),
+    svgmin        = require('gulp-svgmin'),
+    path          = require('path');
+
 var browserSync   = require('browser-sync').create(),
     reload        = browserSync.reload;
 
@@ -63,6 +68,34 @@ gulp.task('js', function() {
     .pipe(browserSync.stream());
 });
 
+// Icons -----------------------------------------------------------------------
+
+gulp.task('icons', function() {
+  return gulp.src(source + '/icons/**/*.svg')
+    .pipe(svgmin(function (file) {
+      var prefix = path.basename(file.relative, path.extname(file.relative));
+      return {
+        plugins: [{
+          removeDoctype: true
+        }, {
+          removeComments: true
+        }, {
+          cleanupIDs: {
+            prefix: prefix + '-',
+            minify: false
+          }
+        }]
+      }
+    }))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(cheerio(function($) {
+      $('[fill]').removeAttr('fill');
+      $('svg').attr('display', 'none');
+    }))
+    .pipe(gulp.dest(destination + '/img'))
+    .pipe(browserSync.stream());
+});
+
 // Images ----------------------------------------------------------------------
 
 gulp.task('images', function() {
@@ -106,6 +139,7 @@ gulp.task('watch', function() {
   gulp.watch(source + '/stylesheets/**/*.{scss,sass}', ['css']);
   gulp.watch(source + '/scripts/**/*.js', ['js']);
   gulp.watch(source + '/webfonts/**/*', ['fonts']);
+  gulp.watch(source + '/icons/**/*.svg', ['icons']);
   gulp.watch(source + '/images/**/*', ['images']);
   gulp.watch(['build']);
 });
@@ -119,7 +153,7 @@ gulp.task('clear', function (done) {
 // Build -----------------------------------------------------------------------
 
 gulp.task('build', function(callback) {
-  runSequence('clear', 'css', 'js', 'images', 'fonts', callback);
+  runSequence('clear', 'css', 'js', 'icons', 'images', 'fonts', callback);
 });
 
 // Gulp ------------------------------------------------------------------------
