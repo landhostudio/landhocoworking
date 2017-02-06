@@ -27,7 +27,22 @@ $font-form-height: rem-calc(50)
 
 // Layout ----------------------------------------------------------------------
 
-$padding: em-calc(24)
+$padding: rem-calc(24)
+
+$column: (100% / 12)
+
+$column-1: calc(#{$column} - #{$padding})
+$column-2: calc(#{$column * 2} - #{$padding})
+$column-3: calc(#{$column * 3} - #{$padding})
+$column-4: calc(#{$column * 4} - #{$padding})
+$column-5: calc(#{$column * 5} - #{$padding})
+$column-6: calc(#{$column * 6} - #{$padding})
+$column-7: calc(#{$column * 7} - #{$padding})
+$column-8: calc(#{$column * 8} - #{$padding})
+$column-9: calc(#{$column * 9} - #{$padding})
+$column-10: calc(#{$column * 10} - #{$padding})
+$column-11: calc(#{$column * 11} - #{$padding})
+$column-12: calc(#{$column * 12} - #{$padding})
 
 // Media Queries ---------------------------------------------------------------
 // Usage case one: @include media($screen-sm-min)
