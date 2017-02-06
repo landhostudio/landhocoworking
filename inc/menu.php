@@ -45,7 +45,7 @@ class walkerHeaderMenu extends Walker_Nav_Menu {
 class walkerFooterMenu extends Walker_Nav_Menu {
 
 	public function start_el(&$output, $item, $depth, $args) {
-		$output     .= '<li class="footer__navigation__item'.($item->current ? ' footer__navigation__item--active':'').'">';
+		$output     .= '<li class="footer__navigation__item layout__sm__6'.($item->current ? ' footer__navigation__item--active':'').'">';
 		$attributes  = '';
 
 		! empty ( $item->attr_title )
