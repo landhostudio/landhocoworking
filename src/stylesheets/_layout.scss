@@ -1,0 +1,84 @@
+.layout {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: - ($padding / 2);
+    margin-left: - ($padding / 2);
+  }
+
+  &__mb, &__sm, &__md, &__lg {
+    &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8, &__9, &__10, &__11, &__12 { width: $column-12; }
+  }
+
+  &__mb {
+    @include media(max-width $screen-sm-max) {
+      &__1 { width: $column-1; }
+      &__2 { width: $column-2; }
+      &__3 { width: $column-3; }
+      &__4 { width: $column-4; }
+      &__5 { width: $column-5; }
+      &__6 { width: $column-6; }
+      &__7 { width: $column-7; }
+      &__8 { width: $column-8; }
+      &__9 { width: $column-9; }
+      &__10 { width: $column-10; }
+      &__11 { width: $column-11; }
+      &__12 { width: $column-12; }
+    }
+  }
+
+  &__sm {
+    @include media($screen-sm-min) {
+      &__1 { width: $column-1; }
+      &__2 { width: $column-2; }
+      &__3 { width: $column-3; }
+      &__4 { width: $column-4; }
+      &__5 { width: $column-5; }
+      &__6 { width: $column-6; }
+      &__7 { width: $column-7; }
+      &__8 { width: $column-8; }
+      &__9 { width: $column-9; }
+      &__10 { width: $column-10; }
+      &__11 { width: $column-11; }
+      &__12 { width: $column-12; }
+    }
+  }
+
+  &__md {
+    @include media($screen-md-min) {
+      &__1 { width: $column-1; }
+      &__2 { width: $column-2; }
+      &__3 { width: $column-3; }
+      &__4 { width: $column-4; }
+      &__5 { width: $column-5; }
+      &__6 { width: $column-6; }
+      &__7 { width: $column-7; }
+      &__8 { width: $column-8; }
+      &__9 { width: $column-9; }
+      &__10 { width: $column-10; }
+      &__11 { width: $column-11; }
+      &__12 { width: $column-12; }
+    }
+  }
+
+  &__lg {
+    @include media($screen-lg-min) {
+      &__1 { width: $column-1; }
+      &__2 { width: $column-2; }
+      &__3 { width: $column-3; }
+      &__4 { width: $column-4; }
+      &__5 { width: $column-5; }
+      &__6 { width: $column-6; }
+      &__7 { width: $column-7; }
+      &__8 { width: $column-8; }
+      &__9 { width: $column-9; }
+      &__10 { width: $column-10; }
+      &__11 { width: $column-11; }
+      &__12 { width: $column-12; }
+    }
+  }
+
+}
+
