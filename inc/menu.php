@@ -3,7 +3,7 @@
 class walkerHeaderMenu extends Walker_Nav_Menu {
 
 	public function start_el(&$output, $item, $depth, $args) {
-		$output     .= '<li class="nav__item'.($item->current ? ' nav__item--active':'').'">';
+		$output     .= '<li class="header__navigation__item'.($item->current ? ' header__navigation__item--active':'').'">';
 		$attributes  = '';
 
 		! empty ( $item->attr_title )
@@ -45,7 +45,7 @@ class walkerHeaderMenu extends Walker_Nav_Menu {
 class walkerFooterMenu extends Walker_Nav_Menu {
 
 	public function start_el(&$output, $item, $depth, $args) {
-		$output     .= '<li class="nav__item'.($item->current ? ' nav__item--active':'').'">';
+		$output     .= '<li class="footer__navigation__item'.($item->current ? ' footer__navigation__item--active':'').'">';
 		$attributes  = '';
 
 		! empty ( $item->attr_title )

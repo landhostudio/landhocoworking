@@ -3,9 +3,19 @@
   'use strict';
 
   var init = function() {
+
+    initHeader();
+
     if ($('.contact__map__object').length) {
       initGoogleMaps();
     }
+
+  };
+
+  function initHeader() {
+    $('.button--nav').click(function(event) {
+      $('.header').toggleClass('header--opened');
+    });
   };
 
   function initGoogleMaps() {

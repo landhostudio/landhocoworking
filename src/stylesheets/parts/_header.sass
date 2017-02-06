@@ -1,1 +1,188 @@
 .header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: ($padding / 1.5) 0
+  background-color: $color-4
+  box-shadow: $shadow
+  z-index: 99
+
+  @include media($screen-sm-min)
+    padding: $padding 0
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+  &__logo
+    order: 2
+
+    @include media(max-width $screen-sm-max)
+      position: absolute
+      left: 0
+      width: 100%
+      text-align: center
+      z-index: 1
+      top: em-calc(13)
+
+    &__title
+      line-height: 0
+      margin: 0
+      
+      svg
+        width: em-calc(134)
+        height: em-calc(34)
+
+  &__menu
+
+    @include media(max-width $screen-sm-max)
+      order: 1
+      position: relative
+      z-index: 2
+
+    @include media($screen-sm-min)
+      display: none
+
+    .button
+      &--nav
+        @include media(max-width $screen-sm-max)
+          height: em-calc(26)
+          font-size: em-calc(16)
+          border: 0
+          padding: 0
+          color: $color-1
+          background-color: transparent
+        
+          &-bar
+            display: block
+            background-color: currentColor
+            height: em-calc(3)
+            width: em-calc(24)
+            border-radius: em-calc(1)
+
+            .header--opened &
+              &:nth-of-type(2)
+                transform: translateY(#{em-calc(8)}) rotate(45deg)
+              &:nth-of-type(3)
+                opacity: 0
+              &:nth-of-type(4)
+                transform: translateY(-#{em-calc(6)}) rotate(-45deg)
+
+            + .button--nav-bar
+              margin-top: em-calc(4)
+
+  &__info
+    position: relative
+    display: flex
+    order: 3
+    z-index: 2
+
+    .button
+      font-weight: 700
+
+      + .button
+        margin-left: $padding
+
+        @include media($screen-sm-min)
+          margin-left: ($padding * 2)
+
+      color: $color-1
+      background-color: transparent
+      border-color: transparent
+      
+      @include media(max-width $screen-sm-max)
+        font-size: em-calc(16)
+        height: em-calc(24)
+        line-height: em-calc(24)
+
+        span
+          position: absolute
+          left: -999em
+        
+        svg
+          width: em-calc(24)
+          height: em-calc(24)
+        
+      @include media($screen-sm-min)
+        display: flex
+        align-items: center
+        font-size: em-calc(10)
+        line-height: normal
+        height: auto
+        height: rem-calc(36)
+        line-height: rem-calc(36)
+
+        span
+          margin-left: em-calc(8)
+
+        svg
+          order: -1
+          height: rem-calc(16)
+          width: rem-calc(16)
+
+      &--phone
+        padding: 0
+
+        @include media(max-width $screen-sm-max)
+          display: none
+
+      &--contact
+        @include media(max-width $screen-sm-max)
+          padding: 0
+
+        @include media($screen-sm-min)
+          border-color: currentColor
+
+          svg
+            display: none
+
+  &__navigation
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: rem-calc(1)
+
+    @include media(max-width $screen-sm-max)
+      order: 4
+      flex-basis: 100%
+      overflow: hidden
+
+      // closed
+      height: 0
+      visibility: hidden
+      opacity: 0
+
+      .header--opened &
+        height: auto
+        visibility: visible
+        opacity: 1
+
+    @include media($screen-sm-min)
+      order: 1
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+
+      @include media(max-width $screen-sm-max)
+        margin-top: rem-calc(24)
+        padding-top: rem-calc(16)
+        border-top: rem-calc(1) solid $color-3
+
+    &__item
+      @include media($screen-sm-min)
+        display: inline-block
+        
+        + li
+          margin-left: em-calc(16)
+
+      a
+        font-size: em-calc(10)
+
+        @include media(max-width $screen-sm-max)
+          display: block
+          padding-top: em-calc(16)
+          padding-bottom: em-calc(16)
