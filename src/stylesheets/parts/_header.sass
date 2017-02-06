@@ -20,14 +20,6 @@
   &__logo
     order: 2
 
-    @include media(max-width $screen-sm-max)
-      position: absolute
-      left: 0
-      width: 100%
-      text-align: center
-      z-index: 1
-      top: em-calc(13)
-
     &__title
       line-height: 0
       margin: 0
@@ -40,8 +32,6 @@
 
     @include media(max-width $screen-sm-max)
       order: 1
-      position: relative
-      z-index: 2
 
     @include media($screen-sm-min)
       display: none
@@ -75,19 +65,15 @@
               margin-top: em-calc(4)
 
   &__info
-    position: relative
     display: flex
     order: 3
-    z-index: 2
 
     .button
       font-weight: 700
 
-      + .button
-        margin-left: $padding
-
-        @include media($screen-sm-min)
-          margin-left: ($padding * 2)
+      @include media($screen-sm-min)
+        + .button
+          margin-left: $padding
 
       color: $color-1
       background-color: transparent
