@@ -10,7 +10,6 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cache": "^0.4.5",
     "gulp-cheerio": "^0.6.2",
-    "gulp-combine-mq": "^0.4.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-cssnano": "^2.1.2",
     "gulp-flatten": "^0.3.1",

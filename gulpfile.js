@@ -6,7 +6,6 @@ var gulp          = require('gulp'),
     flatten       = require('gulp-flatten');
 
 var sass          = require('gulp-sass'),
-    combineMq     = require('gulp-combine-mq'),
     autoprefixer  = require('gulp-autoprefixer'),
     cssnano       = require('gulp-cssnano'),
     csscomb       = require('gulp-csscomb'),
@@ -53,7 +52,6 @@ gulp.task('css', function() {
       precision: 6
     }).on('error', sass.logError))
     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe(combineMq())
     .pipe(csscomb())
     .pipe(gulp.dest(destination + '/css'))
     .pipe(browserSync.stream());
