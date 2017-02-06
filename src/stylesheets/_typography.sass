@@ -15,28 +15,48 @@ h6, .h6
   letter-spacing: $font-heading-spacing
   text-transform: uppercase
   margin-top: 0
-  margin-bottom: rem-calc(16)
+  margin-bottom: rem-calc(8)
 
-h1, .h1
-  font-size: em-calc(48)
+  @include media($screen-sm-min)
+    margin-bottom: rem-calc(16)
 
+h1, .h1,
 h2, .h2
-  font-size: em-calc(48)
+  font-size: em-calc(32)
+  @include media($screen-sm-min)
+    font-size: em-calc(48)
 
 h3, .h3
-  font-size: em-calc(24)
+  font-size: em-calc(20)
+  @include media($screen-sm-min)
+    font-size: em-calc(24)
 
 h4, .h4
-  font-size: em-calc(18)
+  font-size: em-calc(16)
+  @include media($screen-sm-min)
+    font-size: em-calc(18)
 
 h5, .h5
-  font-size: em-calc(16)
+  font-size: em-calc(14)
+  @include media($screen-sm-min)
+    font-size: em-calc(16)
 
 h6, .h6
-  font-size: em-calc(14)
+  font-size: em-calc(12)
+  @include media($screen-sm-min)
+    font-size: em-calc(14)
+
+p
+  margin-top: rem-calc(8)
+  margin-bottom: rem-calc(8)
+
+  @include media($screen-sm-min)
+    margin-top: rem-calc(16)
+    margin-bottom: rem-calc(16)
 
 .lead
-  font-size: em-calc(18)
+  @include media($screen-sm-min)
+    font-size: em-calc(18)
 
 .normalized
   font-family: $font-body
