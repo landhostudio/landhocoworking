@@ -1,3 +1,26 @@
 .heading
   text-align: center
-  padding: ($padding * 2) 0
+
+  &--contrast
+    .container
+      background-color: $color-4
+
+  .container
+    padding-top: ($padding * 2)
+    padding-bottom: ($padding * 2)
+
+  .button
+    margin-top: ($padding / 2)
+
+  &__logos
+    margin-bottom: ($padding / 2)
+    margin-right: 0
+    margin-left: 0
+    justify-content: center
+
+    a
+      line-height: 0
+      padding: $padding
+
+    img
+      max-width: rem-calc(96)

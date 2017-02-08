@@ -6,13 +6,21 @@
     </div>
   <?php endif; ?>
 
-  <div class="home__header">
-    <h2 class="h1"><?php the_title(); ?></h2>
+  <header class="heading">
+    <div class="container">
+      <div class="layout__row">
 
-    <?php if (get_field('page_lead')): ?>
-      <p class="lead"><?php the_field('page_lead'); ?></p>
-    <?php endif; ?>
-  </div>
+        <div class="layout__sm__8">
+          <h2 class="h1"><?php the_title(); ?></h2>
+
+          <?php if (get_field('page_lead')): ?>
+            <p class="lead"><?php the_field('page_lead'); ?></p>
+          <?php endif; ?>
+        </div>
+
+      </div>
+    </div>
+  </header>
 
   <?php if (have_rows('home_board')): ?>
     <div class="home__board">
