@@ -2,7 +2,7 @@
       <div class="container">
         <div class="layout__row">
 
-          <div class="footer__logo layout__sm__3">
+          <div class="footer__logo layout__xs__12 layout__sm__3 layout__md__3 layout__lg__3">
             <h2 class="footer__logo__title h5">
               <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
                 <span class="hidden"><?php bloginfo('name'); ?></span>
@@ -14,10 +14,10 @@
           </div>
 
           <?php if (has_nav_menu('footer') || has_nav_menu('social')): ?>
-            <nav role="navigation" class="footer__navigation layout__sm__4">
+            <nav role="navigation" class="footer__navigation layout__xs__12 layout__sm__4 layout__md__4 layout__lg__4">
               <h2 class="hidden"><?php esc_html_e('Footer menu', 'landhocoworking'); ?></h2>
 
-              <ul class="layout__row">
+              <ul class="layout__row layout__row__xs--center layout__row__xs--column">
                 <?php wp_nav_menu(array(
                   'theme_location' => 'footer',
                   'items_wrap' => '%3$s',
@@ -28,7 +28,7 @@
           <?php endif; ?>
 
           <?php if (get_field('options_phone', option) || get_field('options_email', option) || get_field('options_address', option) || get_field('options_facebook', option) || get_field('options_instagram', option)): ?>
-            <div class="footer__social layout__sm__5">
+            <div class="footer__social layout__xs__12 layout__sm__5 layout__md__5 layout__lg__5">
 
               <?php if (get_field('options_phone', option)): ?>
                 <a href="tel:<?php the_field('options_phone', option); ?>">
@@ -78,7 +78,7 @@
             </div>
           <?php endif; ?>
 
-          <div class="footer__copyright layout__mb__12">
+          <div class="footer__copyright layout__xs__12 layout__sm__12 layout__md__12 layout__lg__12">
             <small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>.</small>
           </div>
         </div>

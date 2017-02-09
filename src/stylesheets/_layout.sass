@@ -1,0 +1,279 @@
+.layout
+
+  &__row
+    display: flex
+    flex: 0 1 auto
+    flex-direction: row
+    flex-wrap: wrap
+    margin-right: - ($padding / 2)
+    margin-left: - ($padding / 2)
+    box-sizing: border-box
+
+    &__xs
+      @include media(max-width $screen-sm-max)
+        &--left
+          justify-content: flex-start
+        &--center
+          justify-content: center
+        &--right
+          justify-content: flex-end
+        &--column
+          flex-direction: column
+
+    &__sm
+      @include media(min-width $screen-sm-min max-width $screen-md-max)
+        &--left
+          justify-content: flex-start
+        &--center
+          justify-content: center
+        &--right
+          justify-content: flex-end
+        &--column
+          flex-direction: column
+
+    &__md
+      @include media(min-width $screen-md-min max-width $screen-lg-max)
+        &--left
+          justify-content: flex-start
+        &--center
+          justify-content: center
+        &--right
+          justify-content: flex-end
+        &--column
+          flex-direction: column
+
+    &__lg
+      @include media($screen-lg-min)
+        &--left
+          justify-content: flex-start
+        &--center
+          justify-content: center
+        &--right
+          justify-content: flex-end
+
+  &__xs, &__sm, &__md, &__lg
+    &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8, &__9, &__10, &__11, &__12
+      flex: 0 0 auto
+      padding-right: ($padding / 2)
+      padding-left: ($padding / 2)
+      box-sizing: border-box
+
+  &__xs
+    @include media(max-width $screen-sm-max)
+      &__1
+        flex-basis: $column-1
+        max-width: $column-1
+
+      &__2
+        flex-basis: $column-2
+        max-width: $column-2
+
+      &__3
+        flex-basis: $column-3
+        max-width: $column-3
+
+      &__4
+        flex-basis: $column-4
+        max-width: $column-4
+
+      &__5
+        flex-basis: $column-5
+        max-width: $column-5
+
+      &__6
+        flex-basis: $column-6
+        max-width: $column-6
+
+      &__7
+        flex-basis: $column-7
+        max-width: $column-7
+
+      &__8
+        flex-basis: $column-8
+        max-width: $column-8
+
+      &__9
+        flex-basis: $column-9
+        max-width: $column-9
+
+      &__10
+        flex-basis: $column-10
+        max-width: $column-10
+
+      &__11
+        flex-basis: $column-11
+        max-width: $column-11
+
+      &__12
+        flex-basis: $column-12
+        max-width: $column-12
+
+      &__auto
+        flex-grow: 1
+        flex-basis: 0
+        max-width: 100%
+
+  &__sm
+    @include media(min-width $screen-sm-min max-width $screen-md-max)
+      &__1
+        flex-basis: $column-1
+        max-width: $column-1
+
+      &__2
+        flex-basis: $column-2
+        max-width: $column-2
+
+      &__3
+        flex-basis: $column-3
+        max-width: $column-3
+
+      &__4
+        flex-basis: $column-4
+        max-width: $column-4
+
+      &__5
+        flex-basis: $column-5
+        max-width: $column-5
+
+      &__6
+        flex-basis: $column-6
+        max-width: $column-6
+
+      &__7
+        flex-basis: $column-7
+        max-width: $column-7
+
+      &__8
+        flex-basis: $column-8
+        max-width: $column-8
+
+      &__9
+        flex-basis: $column-9
+        max-width: $column-9
+
+      &__10
+        flex-basis: $column-10
+        max-width: $column-10
+
+      &__11
+        flex-basis: $column-11
+        max-width: $column-11
+
+      &__12
+        flex-basis: $column-12
+        max-width: $column-12
+
+      &__auto
+        flex-grow: 1
+        flex-basis: 0
+        max-width: 100%
+
+  &__md
+    @include media(min-width $screen-md-min max-width $screen-lg-max)
+      &__1
+        flex-basis: $column-1
+        max-width: $column-1
+
+      &__2
+        flex-basis: $column-2
+        max-width: $column-2
+
+      &__3
+        flex-basis: $column-3
+        max-width: $column-3
+
+      &__4
+        flex-basis: $column-4
+        max-width: $column-4
+
+      &__5
+        flex-basis: $column-5
+        max-width: $column-5
+
+      &__6
+        flex-basis: $column-6
+        max-width: $column-6
+
+      &__7
+        flex-basis: $column-7
+        max-width: $column-7
+
+      &__8
+        flex-basis: $column-8
+        max-width: $column-8
+
+      &__9
+        flex-basis: $column-9
+        max-width: $column-9
+
+      &__10
+        flex-basis: $column-10
+        max-width: $column-10
+
+      &__11
+        flex-basis: $column-11
+        max-width: $column-11
+
+      &__12
+        flex-basis: $column-12
+        max-width: $column-12
+
+      &__auto
+        flex-grow: 1
+        flex-basis: 0
+        max-width: 100%
+
+  &__lg
+    @include media($screen-lg-min)
+      &__1
+        flex-basis: $column-1
+        max-width: $column-1
+
+      &__2
+        flex-basis: $column-2
+        max-width: $column-2
+
+      &__3
+        flex-basis: $column-3
+        max-width: $column-3
+
+      &__4
+        flex-basis: $column-4
+        max-width: $column-4
+      
+      &__5
+        flex-basis: $column-5
+        max-width: $column-5
+
+      &__6
+        flex-basis: $column-6
+        max-width: $column-6
+
+      &__7
+        flex-basis: $column-7
+        max-width: $column-7
+
+      &__8
+        flex-basis: $column-8
+        max-width: $column-8
+
+      &__9
+        flex-basis: $column-9
+        max-width: $column-9
+
+      &__10
+        flex-basis: $column-10
+        max-width: $column-10
+
+      &__11
+        flex-basis: $column-11
+        max-width: $column-11
+
+      &__12
+        flex-basis: $column-12
+        max-width: $column-12
+
+      &__auto
+        flex-grow: 1
+        flex-basis: 0
+        max-width: 100%
