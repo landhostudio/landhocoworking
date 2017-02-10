@@ -11,6 +11,7 @@
 			// Enable support for Post Thumbnails on posts and pages -----------------
 			
       add_theme_support('post-thumbnails');
+      add_image_size('thumbnail-large', 960, 960, true);
 
 			// Enables dynamic navigation --------------------------------------------
 
