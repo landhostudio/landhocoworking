@@ -1,8 +1,12 @@
 <article class="home">
 
   <?php if (has_post_thumbnail()): ?>
-    <div class="home__cover">
-      <?php the_post_thumbnail('large'); ?>
+    <div class="cover">
+      <div class="container">
+        <div class="cover__image">
+          <?php the_post_thumbnail('large'); ?>
+        </div>
+      </div>
     </div>
   <?php endif; ?>
 

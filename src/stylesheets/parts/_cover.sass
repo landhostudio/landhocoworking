@@ -1,0 +1,18 @@
+.cover
+
+  .container
+    @include media(max-width $screen-md-max)
+      padding-right: 0
+      padding-left: 0
+  
+  &__image
+    position: relative
+    padding-bottom: per-width(16,9)
+    line-height: 0
+    overflow: hidden
+
+    img
+      position: absolute
+      top: 50%
+      width: 100%
+      transform: translateY(-50%)
