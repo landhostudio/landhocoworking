@@ -21,7 +21,7 @@ get_header(); ?>
     ?>
 
     <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-      <?php get_template_part('template-parts/content', 'plan-preview'); ?>
+      <?php get_template_part('template-sections/content', 'plan-preview'); ?>
     <?php
       endwhile;
       wp_reset_postdata();
@@ -58,7 +58,7 @@ get_header(); ?>
     </section>
   <?php endif; ?>
 <?php else: ?>
-  <?php get_template_part('template-parts/content', 'none'); ?>
+  <?php get_template_part('template-sections/content', 'none'); ?>
 <?php endif; ?>
 
 <?php get_footer(); ?>

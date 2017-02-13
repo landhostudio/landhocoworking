@@ -17,9 +17,9 @@
     <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
 
       <?php if (($count % 4) == 0): ?>
-        <?php get_template_part('template-parts/content', 'preview-large'); ?>
+        <?php get_template_part('template-sections/content', 'preview-large'); ?>
       <?php else: ?>
-        <?php get_template_part('template-parts/content', 'preview'); ?>
+        <?php get_template_part('template-sections/content', 'preview'); ?>
       <?php endif; ?>
       
     <?php
