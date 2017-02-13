@@ -4,7 +4,7 @@ button, input
 
 .button
   display: inline-block
-  font-size: em-calc(14)
+  font-size: em-calc(10)
   font-weight: $font-form-weight
   text-align: center
   white-space: nowrap
@@ -31,10 +31,10 @@ button, input
   &:hover
     opacity: 0.85
 
-  &--small
-    font-size: em-calc(10)
-    height: rem-calc(36)
-    line-height: rem-calc(36)
+  &--inverted
+    background-color: $color-4
+    color: $color-1
+    border-color: $color-4
 
 .input
   display: block
