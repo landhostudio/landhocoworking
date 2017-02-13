@@ -1,16 +1,53 @@
 .heading
   text-align: center
 
-  &--contrast
-    .container
-      background-color: $color-4
-
   .container
     padding-top: ($padding * 2)
     padding-bottom: ($padding * 2)
 
   .button
-    margin-top: ($padding / 2)
+    margin-top: $padding
+
+  &__content
+    padding: $padding
+
+    @include media(max-width $screen-sm-max)
+      order: 1
+
+    @include media($screen-sm-min)
+      display: flex
+      align-items: center
+      position: absolute
+      color: $color-4
+      text-shadow: $shadow
+      height: 100%
+      width: 100%
+      z-index: 1
+      padding: 0 ($padding * 2)
+
+      [class*="left"] &
+        &::after
+          background: linear-gradient(to right,  rgba($color-1, 1) 0%,rgba($color-1, 0) 100%)
+      
+      [class*="right"] &
+        &::after
+          background: linear-gradient(to right,  rgba($color-1, 0) 0%,rgba($color-1, 1) 100%)
+      
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+
+    @include media(max-width $screen-md-max)
+      .lead
+        font-size: rem-calc(14)
+
+    @include media($screen-md-min)
+      width: calc(100% - #{$padding * 2})
 
   &__logos
     margin-bottom: ($padding / 2)
@@ -25,5 +62,46 @@
     img
       max-width: rem-calc(96)
 
+  &__image
+    position: relative
+    padding-bottom: per-width(16,9)
+    line-height: 0
+    overflow: hidden
+
+    img
+      position: absolute
+      top: 50%
+      width: 100%
+      transform: translateY(-50%)
+
   .lead
     margin-bottom: 0
+
+  // Variations ----------------------------------------------------------------
+
+  &--contrast
+    .container
+      background-color: $color-4
+
+  &--banner
+    text-align: inherit
+
+    .container
+      position: relative
+      padding: 0
+      
+      @include media(max-width $screen-sm-max)
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+
+      @include media($screen-md-min)
+        padding: 0 $padding
+
+  + .heading--banner
+    margin-top: $padding
+    margin-bottom: $padding
+
+    @include media($screen-sm-min)
+      margin-top: ($padding * 2)
+      margin-bottom: ($padding * 2)

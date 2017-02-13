@@ -93,6 +93,30 @@
     </div>
   <?php endif; ?>
 
+  <?php if (have_rows('location_banner_new')): ?>
+    <?php while (have_rows('location_banner_new')): the_row(); ?>
+      <div class="heading heading--banner<?php if (get_sub_field('location_banner_type') == 'left'): ?> heading--banner-left<?php elseif (get_sub_field('location_banner_type') == 'right'): ?> heading--banner-right<?php endif; ?>">
+        <div class="container">
+          
+          <div class="heading__content">
+            <div class="layout__row layout__row__xs--center<?php if (get_sub_field('location_banner_type') == 'left'): ?> layout__row__sm--left layout__row__md--left layout__row__lg--left<?php elseif (get_sub_field('location_banner_type') == 'right'): ?> layout__row__sm--right layout__row__md--right layout__row__lg--right<?php endif; ?>">
+              <div class="layout__xs__12 layout__sm__6 layout__md__6 layout__lg__6">
+                <h2 class="h1"><?php the_sub_field('location_banner_title'); ?></h2>
+                <p class="lead"><?php the_sub_field('location_banner_text'); ?></p>
+                <a href="<?php the_sub_field('location_banner_link'); ?>" class="button button--inverted" target="_blank" rel="nofollow"><?php esc_html_e('Leggi di più', 'landhocoworking'); ?></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="heading__image">
+            <?php echo wp_get_attachment_image(get_sub_field('location_banner_image'), 'large', false, array()); ?>
+          </div>
+          
+        </div>
+      </div>
+    <?php endwhile; ?>
+  <?php endif; ?>
+
   <?php if (have_rows('location_banner')): ?>
     <div class="location__banners">
       <?php while (have_rows('location_banner')): the_row(); ?>
