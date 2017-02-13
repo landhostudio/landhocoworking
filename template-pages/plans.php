@@ -13,16 +13,12 @@ get_header(); ?>
   $the_query = new WP_Query($args);
   if ($the_query->have_posts()):
 ?>
-
   <section class="plans">
-  
-    <div class="plans__header">
-      <h2 class="h1"><?php the_title(); ?></h2>
 
-      <?php if (get_field('page_lead')): ?>
-        <p class="lead"><?php the_field('page_lead'); ?></p>
-      <?php endif; ?>
-    </div>
+    <?php
+      get_template_part('template-parts/content', 'hero');
+      get_template_part('template-parts/content', 'heading');
+    ?>
 
     <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
       <?php get_template_part('template-parts/content', 'plan-preview'); ?>
@@ -33,7 +29,10 @@ get_header(); ?>
 
   </section>
 
-  <?php if (have_rows('plans_partners')): ?>
+  <?php
+    // utilizzare un componente dai heading
+    if (have_rows('plans_partners')):
+  ?>
     <section class="plans__banner">
 
       <h3 class="h1"><?php the_field('plans_banner_title'); ?></h3>
@@ -58,7 +57,6 @@ get_header(); ?>
 
     </section>
   <?php endif; ?>
-
 <?php else: ?>
   <?php get_template_part('template-parts/content', 'none'); ?>
 <?php endif; ?>

@@ -1,18 +1,9 @@
 <article class="single">
 
-  <?php if (has_post_thumbnail()): ?>
-    <div class="single__cover">
-      <?php the_post_thumbnail('large'); ?>
-    </div>
-  <?php endif; ?>
-
-  <header class="single__header">
-    <h2 class="h1"><?php the_title(); ?></h2>
-
-    <?php if (get_field('post_lead')): ?>
-      <p class="lead"><?php the_field('post_lead'); ?></p>
-    <?php endif; ?>
-  </header>
+  <?php
+    get_template_part('template-parts/content', 'hero');
+    get_template_part('template-parts/content', 'heading');
+  ?>
 
   <div class="single__content">
     <?php the_content(); ?>

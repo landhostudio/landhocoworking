@@ -1,12 +1,6 @@
 <article class="plan">
 
-  <header class="plan__header">
-    <h2 class="h1"><?php the_title(); ?></h2>
-
-    <?php if (get_field('plan_lead')): ?>
-      <p class="lead"><?php the_field('plan_lead'); ?></p>
-    <?php endif; ?>
-  </header>
+  <?php get_template_part('template-parts/content', 'heading'); ?>
 
   <div class="plan__content">
     

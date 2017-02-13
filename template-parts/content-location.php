@@ -1,18 +1,9 @@
 <article class="location">
 
-  <?php if (has_post_thumbnail()): ?>
-    <div class="location__cover">
-      <?php the_post_thumbnail('large'); ?>
-    </div>
-  <?php endif; ?>
-
-  <div class="location__header">
-    <h2 class="h1"><?php the_title(); ?></h2>
-
-    <?php if (get_field('page_lead')): ?>
-      <p class="lead"><?php the_field('page_lead'); ?></p>
-    <?php endif; ?>
-  </div>
+  <?php
+    get_template_part('template-parts/content', 'hero');
+    get_template_part('template-parts/content', 'heading');
+  ?>
 
   <?php if (have_rows('location_gallery')): ?>
     <div class="location__gallery">
