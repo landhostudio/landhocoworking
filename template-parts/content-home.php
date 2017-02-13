@@ -1,14 +1,5 @@
 <article class="home">
 
-  <?php if (has_post_thumbnail()): ?>
-    <div class="cover">
-      <div class="container">
-        <div class="cover__image">
-          <?php the_post_thumbnail('large'); ?>
-        </div>
-      </div>
-    </div>
-  <?php endif; ?>
 
   <header class="heading">
     <div class="container">
@@ -22,6 +13,9 @@
       </div>
     </div>
   </header>
+  <?php
+    get_template_part('template-parts/content', 'hero');
+  ?>
 
   <?php
     if (have_rows('board')):
