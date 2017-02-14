@@ -53,7 +53,9 @@
                     <div class="card__container">
                       <?php if (get_sub_field('board__small__1__type') == 'video'): ?>
                         <div class="card__play">
-                          <!-- TODO: place play icon here -->
+                          <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
+                          </svg>
                         </div>
                       <?php endif; ?>
 
