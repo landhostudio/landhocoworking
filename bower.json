@@ -10,8 +10,8 @@
     "node_modules",
     "bower_components"
   ],
-  "devDependencies": {
-    "fastclick": "^1.0.6",
-    "normalize-scss": "^3.0.3"
+  "dependencies": {
+    "normalize-scss": "^3.0.3",
+    "fastclick": "^1.0.6"
   }
 }
