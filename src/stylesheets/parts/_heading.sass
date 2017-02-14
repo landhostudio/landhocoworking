@@ -23,7 +23,7 @@
       height: 100%
       width: 100%
       z-index: 1
-      padding: 0 ($padding * 2)
+      padding: 0 $padding
 
       [class*="left"] &
         &::after
@@ -48,6 +48,7 @@
 
     @include media($screen-md-min)
       width: calc(100% - #{$padding * 2})
+      padding: 0 ($padding * 2)
 
   &__logos
     margin-bottom: ($padding / 2)
@@ -98,10 +99,16 @@
       @include media($screen-md-min)
         padding: 0 $padding
 
-  + .heading--banner
-    margin-top: $padding
-    margin-bottom: $padding
+    .button
+      @include media($screen-sm-min)
+        background-color: $color-4
+        color: $color-1
+        border-color: $color-4
 
-    @include media($screen-sm-min)
-      margin-top: ($padding * 2)
-      margin-bottom: ($padding * 2)
+    + .heading--banner
+      margin-top: $padding
+      margin-bottom: $padding
+
+      @include media($screen-sm-min)
+        margin-top: ($padding * 2)
+        margin-bottom: ($padding * 2)
