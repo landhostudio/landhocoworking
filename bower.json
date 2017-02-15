@@ -11,6 +11,7 @@
     "bower_components"
   ],
   "dependencies": {
+    "magnific-popup": "^1.1.0",
     "normalize-scss": "^3.0.3",
     "fastclick": "^1.0.6"
   }

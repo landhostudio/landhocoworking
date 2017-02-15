@@ -6,6 +6,10 @@
 
     initHeader();
 
+    if ($('.board--gallery').length) {
+      initGallery();
+    }
+
     if ($('.contact__map__object').length) {
       initGoogleMaps();
     }
@@ -302,6 +306,34 @@
       
     });
 
+  };
+
+  function initGallery() {
+
+    $('.gallery').magnificPopup({
+      tClose: 'Chiudi',
+      tLoading: 'Caricamento…',
+      delegate: '.card__link',
+      type: 'image',
+      image: {
+        markup: '<div class="mfp-figure">'+
+            '<div class="button--close mfp-close"></div>'+
+            '<div class="mfp-img"></div>'+
+          '</div>',
+      },
+      gallery: {
+        enabled: true,
+        preload: [0,2],
+        tPrev: 'Precedente',
+        tNext: 'Successiva',
+        arrowMarkup: '<button type="button" class="button button--arrow button--arrow-%dir%"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use></svg></button>',
+        tCounter: '%curr% / %total%'
+      },
+      closeBtnInside: false,
+      closeMarkup: '<button type="button" class="button button--close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></button>',
+      autoFocusLast: false
+    });
+    
   };
 
   init();

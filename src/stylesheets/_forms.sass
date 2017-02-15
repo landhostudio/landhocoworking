@@ -40,6 +40,51 @@ button, input
     color: $color-1
     border-color: $color-4
 
+  &--arrow
+    display: flex
+    align-items: center
+    background-color: transparent
+    border-color: transparent
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1046
+    padding: 0 ($padding / 2)
+
+    &-left
+      left: 0
+      svg
+        transform: rotate(180deg)
+    &-right
+      right: 0
+
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+
+  &--close
+    display: flex
+    align-items: center
+    position: fixed
+    top: ($padding / 2.75)
+    right: 0
+    padding: 0
+    background-color: transparent
+    border-color: transparent
+    padding: 0 ($padding / 2)
+
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+
 .input
   display: block
   width: 100%
