@@ -12,6 +12,10 @@
     &--box
       margin: - ($padding / 2)
 
+    &--space
+      margin-right: - $padding
+      margin-left: - $padding
+
     &__xs
       @include media(max-width $screen-sm-max)
         &--left
@@ -63,6 +67,10 @@
 
       .layout__row--box &
         padding: ($padding / 2)
+      
+      .layout__row--space &
+        padding-right: $padding
+        padding-left: $padding
 
   &__xs
     @include media(max-width $screen-sm-max)
