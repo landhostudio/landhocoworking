@@ -13,7 +13,7 @@
             <div class="services__item layout__xs__12 layout__sm__6 layout__md__4 layout__lg__4">
               <?php echo wp_get_attachment_image(get_sub_field('services_image'), 'medium', false, array()); ?>
               <h3><?php the_sub_field('services_title'); ?></h3>
-              <p><?php the_sub_field('services_text'); ?></p>
+              <p class="small"><?php the_sub_field('services_text'); ?></p>
             </div>
           <?php endwhile; ?>
         </div>

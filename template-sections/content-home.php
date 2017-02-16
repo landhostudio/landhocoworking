@@ -22,7 +22,7 @@
                   </div>
                   <div class="card__content">
                     <h3><?php the_sub_field('board__large__title'); ?></h3>
-                    <p><?php the_sub_field('board__large__text'); ?></p>
+                    <p class="small"><?php the_sub_field('board__large__text'); ?></p>
                   </div>
                 </div>
               </a>
@@ -72,7 +72,7 @@
 
                         <?php if (get_sub_field('board__small__1__type') == 'text'): ?>
                           <h3><?php the_sub_field('board__small__1__title'); ?></h3>
-                          <p><?php the_sub_field('board__small__1__text'); ?></p>
+                          <p class="small"><?php the_sub_field('board__small__1__text'); ?></p>
                         <?php endif; ?>
                       </div>
                     </div>
@@ -105,7 +105,7 @@
 
                         <?php if (get_sub_field('board__small__2__type') == 'text'): ?>
                           <h3><?php the_sub_field('board__small__2__title'); ?></h3>
-                          <p><?php the_sub_field('board__small__2__text'); ?></p>
+                          <p class="small"><?php the_sub_field('board__small__2__text'); ?></p>
                         <?php endif; ?>
                       </div>
                     </div>
