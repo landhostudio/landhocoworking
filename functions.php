@@ -25,6 +25,10 @@
 			
 			function init_assets() {
         wp_enqueue_style('all-css', get_template_directory_uri() . '/dist/css/all.css', array(), '1.0.0');
+        
+        wp_deregister_script('jquery');
+        wp_enqueue_script('jquery', get_template_directory_uri() . '/dist/js/jquery.js', array(), '3.1.1');
+        
         wp_enqueue_script('plugins', get_template_directory_uri() . '/dist/js/plugins.js', array('jquery'), '1.0.0', true);
 
         if (is_page_template('template-pages/contact.php')) {
