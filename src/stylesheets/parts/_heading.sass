@@ -81,6 +81,11 @@
   // Variations ----------------------------------------------------------------
 
   &--contrast
+    margin-bottom: $padding
+
+    @include media($screen-md-min)
+      margin-bottom: ($padding * 2)
+
     .container
       background-color: $color-4
 
