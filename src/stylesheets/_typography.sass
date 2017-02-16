@@ -23,29 +23,29 @@ h6, .h6
 
 h1, .h1,
 h2, .h2
-  font-size: em-calc(32)
+  font-size: rem-calc(32)
   @include media($screen-sm-min)
-    font-size: em-calc(48)
+    font-size: rem-calc(48)
 
 h3, .h3
-  font-size: em-calc(20)
+  font-size: rem-calc(20)
   @include media($screen-sm-min)
-    font-size: em-calc(24)
+    font-size: rem-calc(24)
 
 h4, .h4
-  font-size: em-calc(16)
+  font-size: rem-calc(16)
   @include media($screen-sm-min)
-    font-size: em-calc(18)
+    font-size: rem-calc(18)
 
 h5, .h5
-  font-size: em-calc(14)
+  font-size: rem-calc(14)
   @include media($screen-sm-min)
-    font-size: em-calc(16)
+    font-size: rem-calc(16)
 
 h6, .h6
-  font-size: em-calc(12)
+  font-size: rem-calc(12)
   @include media($screen-sm-min)
-    font-size: em-calc(14)
+    font-size: rem-calc(14)
 
 p
   margin-top: rem-calc(8)
@@ -57,10 +57,10 @@ p
 
 .lead
   @include media($screen-sm-min)
-    font-size: em-calc(18)
+    font-size: rem-calc(18)
 
 .small
-  font-size: em-calc(14)
+  font-size: rem-calc(14)
 
 .normalized
   font-family: $font-body
@@ -76,3 +76,11 @@ strong, b, .bold
 a
   color: currentColor
   text-decoration: none
+
+hr
+  display: block
+  height: rem-calc(1)
+  border: 0
+  border-top: 1px solid rgba($color-1, 0.12)
+  margin: ($padding * 2) 0
+  padding: 0

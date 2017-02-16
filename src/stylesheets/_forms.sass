@@ -91,8 +91,8 @@ button, input
   display: block
   width: 100%
   height: $font-form-height
-  padding: em-calc(16) em-calc(24)
-  font-size: em-calc(14)
+  padding: em-calc(4) em-calc(8)
+  font-size: em-calc(16)
   line-height: $font-form-line-height
   color: $color-1
   background-color: $color-4
@@ -103,3 +103,5 @@ button, input
   &:focus
     outline: 0
     border-color: $color-1
+  .button
+    width: calc(100% - #{$padding * 2})

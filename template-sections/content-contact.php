@@ -14,7 +14,7 @@
           $form_object = get_field('contact_form');
           if ($form_object):
         ?>
-          <div class="contact__form">
+          <div class="form">
             <?php echo do_shortcode('[gravityform id="' . $form_object['id'] . '" title="true" description="true" ajax="true"]'); ?>
           </div>
         <?php endif; ?>
