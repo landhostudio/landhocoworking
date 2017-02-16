@@ -29,6 +29,7 @@
   function initGallery() {
 
     $('.gallery').magnificPopup({
+      removalDelay: 300,
       tClose: 'Chiudi',
       tLoading: 'Caricamento…',
       delegate: '.card__link',
@@ -49,7 +50,8 @@
       },
       closeBtnInside: false,
       closeMarkup: '<button type="button" class="button button--close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></button>',
-      autoFocusLast: false
+      autoFocusLast: false,
+      mainClass: 'mfp-fade'
     });
     
   };
