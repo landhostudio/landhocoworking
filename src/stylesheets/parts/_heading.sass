@@ -1,13 +1,6 @@
 .heading
   text-align: center
 
-  .container
-    padding-top: ($padding * 2)
-    padding-bottom: ($padding * 2)
-
-  .button
-    margin-top: $padding
-
   &__content
     padding: $padding
 
@@ -50,18 +43,18 @@
       width: calc(100% - #{$padding * 2})
       padding: 0 ($padding * 2)
 
-  &__logos
-    margin-bottom: ($padding / 2)
-    margin-right: 0
-    margin-left: 0
-    justify-content: center
+  &__partners
+    margin-top: ($padding / 2)
 
-    a
-      line-height: 0
-      padding: $padding
+    &__item
 
-    img
-      max-width: rem-calc(96)
+      a
+        display: block
+        line-height: 0
+
+      img
+        max-width: rem-calc(96)
+    
 
   &__image
     position: relative
@@ -74,6 +67,13 @@
       top: 50%
       width: 100%
       transform: translateY(-50%)
+
+  .container
+    padding-top: ($padding * 2)
+    padding-bottom: ($padding * 2)
+
+  .button
+    margin-top: $padding
 
   .lead
     margin-bottom: 0
