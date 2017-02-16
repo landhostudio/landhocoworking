@@ -88,6 +88,9 @@
 
     .container
       background-color: $color-4
+      
+      @include media($screen-md-min)
+        max-width: calc(#{$screen-md-min} - #{$padding * 4})
 
   &--banner
     text-align: inherit
@@ -103,6 +106,7 @@
 
       @include media($screen-md-min)
         padding: 0 $padding
+        max-width: calc(#{$screen-md-min} - #{$padding * 2})
 
     .button
       @include media($screen-sm-min)
