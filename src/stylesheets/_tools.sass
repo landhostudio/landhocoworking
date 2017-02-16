@@ -7,13 +7,12 @@
   margin-left: auto
   padding-right: $padding
   padding-left: $padding
-  max-width: 100%
-
-  @include media($screen-sm-min)
-    max-width: $screen-sm-min
+  max-width: $screen-md-min
 
   @include media($screen-md-min)
-    max-width: $screen-md-min
+    padding-right: ($padding * 2)
+    padding-left: ($padding * 2)
+    
 
 .mt
   margin-top: $padding

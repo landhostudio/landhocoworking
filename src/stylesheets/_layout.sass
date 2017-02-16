@@ -8,13 +8,16 @@
     margin-right: - ($padding / 2)
     margin-left: - ($padding / 2)
     box-sizing: border-box
+    
+    @include media($screen-md-min)
+      margin-right: - $padding
+      margin-left: - $padding
 
     &--box
       margin: - ($padding / 2)
 
-    &--space
-      margin-right: - $padding
-      margin-left: - $padding
+      @include media($screen-md-min)
+        margin: - $padding
 
     &__xs
       @include media(max-width $screen-sm-max)
@@ -66,13 +69,16 @@
       padding-right: ($padding / 2)
       padding-left: ($padding / 2)
       box-sizing: border-box
+      
+      @include media($screen-md-min)
+        padding-right: $padding
+        padding-left: $padding
 
       .layout__row--box &
         padding: ($padding / 2)
-      
-      .layout__row--space &
-        padding-right: $padding
-        padding-left: $padding
+
+        @include media($screen-md-min)
+          padding: $padding
 
   &__xs
     @include media(max-width $screen-sm-max)
