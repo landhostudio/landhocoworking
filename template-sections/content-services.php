@@ -22,7 +22,7 @@
   <?php endif; ?>
 
   <?php if (get_field('services_banner_if')): ?>
-    <div class="heading heading--contrast mb">
+    <div class="heading heading--contrast">
       <div class="container">
         <div class="layout__row layout__row__xs--center layout__row__sm--center layout__row__md--center layout__row__lg--center">
           <div class="layout__xs__12 layout__sm__8 layout__md__8 layout__lg__8">
