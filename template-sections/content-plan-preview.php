@@ -1,7 +1,7 @@
-<article class="plan plan--preview<?php if (get_field('plan_featured')): ?> plan--featured<?php endif; ?>">
-
-    <h2><?php the_title(); ?></h2>
-    <p><?php the_field('plan_price'); ?></p>
+<div class="layout__xs__12 layout__sm__4 layout__md__4 layout__lg__4<?php if (get_field('plan_featured')): ?> layout__xs--first<?php endif; ?>">
+  <article class="plans__item plans__item--preview<?php if (get_field('plan_featured')): ?> plans__item--featured<?php endif; ?>">
+    <h2 class="h3"><?php the_title(); ?></h2>
+    <p class="small"><?php the_field('plan_price'); ?></p>
 
     <a href="<?php the_permalink(); ?>" rel="bookmark" class="button"><?php esc_html_e('Leggi di più', 'landhocoworking'); ?></a>
     
@@ -14,5 +14,5 @@
         <?php endwhile; ?>
       </ul>
     <?php endif; ?>
-
-</article>
+  </article>
+</div>
