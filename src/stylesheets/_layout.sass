@@ -64,7 +64,8 @@
           flex-direction: column
 
   &__xs, &__sm, &__md, &__lg
-    &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8, &__9, &__10, &__11, &__12, &__auto
+
+    &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8, &__9, &__10, &__11, &__12
       flex: 0 0 auto
       padding-right: ($padding / 2)
       padding-left: ($padding / 2)
@@ -79,6 +80,15 @@
 
         @include media($screen-md-min)
           padding: $padding
+
+    &__auto
+      padding-right: ($padding / 2)
+      padding-left: ($padding / 2)
+      box-sizing: border-box
+      
+      @include media($screen-md-min)
+        padding-right: $padding
+        padding-left: $padding
 
   &__xs
     @include media(max-width $screen-sm-max)
