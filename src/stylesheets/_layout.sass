@@ -135,6 +135,12 @@
         flex-basis: 0
         max-width: 100%
 
+      &--first
+        order: -1
+
+      &--last
+        order: 999
+
   &__sm
     @include media(min-width $screen-sm-min max-width $screen-md-max)
       &__1
@@ -189,6 +195,12 @@
         flex-grow: 1
         flex-basis: 0
         max-width: 100%
+
+      &--first
+        order: -1
+
+      &--last
+        order: 999
 
   &__md
     @include media(min-width $screen-md-min max-width $screen-lg-max)
@@ -245,6 +257,12 @@
         flex-basis: 0
         max-width: 100%
 
+      &--first
+        order: -1
+
+      &--last
+        order: 999
+
   &__lg
     @include media($screen-lg-min)
       &__1
@@ -299,3 +317,9 @@
         flex-grow: 1
         flex-basis: 0
         max-width: 100%
+
+      &--first
+        order: -1
+
+      &--last
+        order: 999
