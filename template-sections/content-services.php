@@ -8,7 +8,7 @@
   <?php if (have_rows('services')): ?>
     <div class="services__items">
       <div class="container">
-        <div class="layout__row layout__row--space">
+        <div class="layout__row">
           <?php while (have_rows('services')): the_row(); ?>
             <div class="services__item layout__xs__12 layout__sm__6 layout__md__4 layout__lg__4">
               <?php echo wp_get_attachment_image(get_sub_field('services_image'), 'medium', false, array()); ?>
