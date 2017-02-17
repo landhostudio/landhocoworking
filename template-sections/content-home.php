@@ -13,7 +13,7 @@
       <div class="container">
         <div class="layout__row layout__row--box">
 
-          <div class="layout__xs__12 layout__sm__6 layout__md__6 layout__lg__6">
+          <div class="group-1 layout__xs__12 layout__sm__6 layout__md__6 layout__lg__6">
             <article class="card card__1 card--large">
               <a href="<?php the_sub_field('board__large__link'); ?>" rel="bookmark" class="card__link">
                 <div class="card__container">
@@ -29,10 +29,10 @@
             </article>
           </div>
 
-          <div class="layout__xs__12 layout__sm__6 layout__md__6 layout__lg__6">
+          <div class="group-2 layout__xs__12 layout__sm__6 layout__md__6 layout__lg__6">
             <div class="layout__row layout__row--box">
 
-              <div class="layout__xs__12 layout__sm__12 layout__md__12 layout__lg__12">
+              <div class="group-2__item-1 layout__xs__12 layout__sm__12 layout__md__12 layout__lg__12">
                 <article class="card card__2 card--medium">
                   <a href="<?php the_sub_field('board__medium__link'); ?>" rel="bookmark" class="card__link">
                     <div class="card__container">
@@ -47,7 +47,7 @@
                 </article>
               </div>
 
-              <div class="layout__xs__6 layout__sm__6 layout__md__6 layout__lg__6">
+              <div class="group-2__item-2 layout__xs__6 layout__sm__6 layout__md__6 layout__lg__6">
                 <article class="card card__3 card--small<?php if (get_sub_field('board__small__1__type') == 'image'): ?> card--image<?php elseif (get_sub_field('board__small__1__type') == 'video'): ?> card--video<?php elseif (get_sub_field('board__small__1__type') == 'text'): ?> card--text<?php endif; ?>">
                   <a href="<?php the_sub_field('board__small__1__link'); ?>" rel="bookmark" class="card__link">
                     <div class="card__container">
@@ -80,7 +80,7 @@
                 </article>
               </div>
 
-              <div class="layout__xs__6 layout__sm__6 layout__md__6 layout__lg__6">
+              <div class="group-2__item-3 layout__xs__6 layout__sm__6 layout__md__6 layout__lg__6">
                 <article class="card card__4 card--small<?php if (get_sub_field('board__small__2__type') == 'image'): ?> card--image<?php elseif (get_sub_field('board__small__2__type') == 'video'): ?> card--video<?php elseif (get_sub_field('board__small__2__type') == 'text'): ?> card--text<?php endif; ?>">
                   <a href="<?php the_sub_field('board__small__2__link'); ?>" rel="bookmark" class="card__link">
                     <div class="card__container">

@@ -9,50 +9,56 @@
 
   // Content order -------------------------------------------------------------
 
-  // &--one
-  //   .card__1
-  //     order: 1
-  //   .card__group
-  //     order: 2
-  //   .card__2
-  //     order: 1
-  //   .card__3
-  //     order: 2
-  //   .card__4
-  //     order: 3
-  // &--two
-  //   .card__1
-  //     order: 1
-  //   .card__group
-  //     order: 2
-  //   .card__2
-  //     order: 3
-  //   .card__3
-  //     order: 1
-  //   .card__4
-  //     order: 2
-  // &--three
-  //   .card__1
-  //     order: 2
-  //   .card__group
-  //     order: 1
-  //   .card__2
-  //     order: 1
-  //   .card__3
-  //     order: 2
-  //   .card__4
-  //     order: 3
-  // &--four
-  //   .card__1
-  //     order: 2
-  //   .card__group
-  //     order: 1
-  //   .card__2
-  //     order: 3
-  //   .card__3
-  //     order: 1
-  //   .card__4
-  //     order: 2
+  &--one
+    
+    .group-1
+      order: 1
+    .group-2
+      order: 2
+      &__item-1
+        order: 1
+      &__item-2
+        order: 2
+      &__item-3
+        order: 3
+
+  &--two
+
+    .group-1
+      order: 1
+    .group-2
+      order: 2
+      &__item-1
+        order: 3
+      &__item-2
+        order: 1
+      &__item-3
+        order: 2
+
+  &--three
+
+    .group-1
+      order: 2
+    .group-2
+      order: 1
+      &__item-1
+        order: 3
+      &__item-2
+        order: 1
+      &__item-3
+        order: 2
+
+  &--four
+    .group-1
+      order: 2
+    .group-2
+      order: 1
+      &__item-1
+        order: 1
+      &__item-2
+        order: 2
+      &__item-3
+        order: 3
 
 .card
   position: relative
