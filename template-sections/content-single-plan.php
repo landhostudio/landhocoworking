@@ -13,7 +13,7 @@
 
             <div class="form">
               <p class="h3"><?php the_title(); ?></p>
-              <p class="h5 normalized"><?php the_field('plan_price'); ?></p>
+              <p class="h6 normalized"><?php the_field('plan_price'); ?></p>
               <?php echo do_shortcode('[gravityform id="' . $form_object['id'] . '" title="false" description="false" ajax="true"]'); ?>
             </div>
 
