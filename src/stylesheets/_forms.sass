@@ -16,7 +16,7 @@ button, input
   text-transform: uppercase
   letter-spacing: em-calc(1)
   border: em-calc(1) solid $color-1
-  border-radius: 0
+  border-radius: ($radius / 2)
   vertical-align: middle
   cursor: pointer
   user-select: none
@@ -98,7 +98,7 @@ button, input
   background-color: $color-4
   background-image: none
   border: em-calc(1) solid lighten($color-1, 70%)
-  border-radius: em-calc(3)
+  border-radius: ($radius / 2)
   -webkit-appearance: none
 
   &:focus
@@ -109,7 +109,7 @@ button, input
   background-color: $color-4
   box-shadow: $shadow
   padding: em-calc(24)
-  border-radius: em-calc(6)
+  border-radius: $radius
   margin-bottom: ($padding * 2)
 
   h3
@@ -168,7 +168,7 @@ button, input
     input[type=checkbox]
       + label
         &:before
-          border-radius: em-calc(3)
+          border-radius: ($radius / 2)
 
   ul
     list-style: none
