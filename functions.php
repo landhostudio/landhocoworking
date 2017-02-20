@@ -48,6 +48,17 @@
       }
       add_filter('upload_mimes', 'svg_upload');
 
+      // Excerpt ---------------------------------------------------------------
+
+      function new_excerpt_length($length) {
+      	return 30;
+      }
+      add_filter('excerpt_length', 'new_excerpt_length');
+
+      add_filter('excerpt_more', function($more) {
+      	return '…';
+      });
+
       // Soil ------------------------------------------------------------------
       
       get_template_part('inc/soil');
