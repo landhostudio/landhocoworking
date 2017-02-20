@@ -1,0 +1,35 @@
+.article
+
+  &__content
+    p + h1, h2, h3, h4, h5, h6
+      margin-top: $padding
+
+      @include media($screen-sm-min)
+        margin-top: ($padding * 2)
+
+  &__share
+    text-align: center
+    padding-top: $padding
+    padding-bottom: $padding
+
+    @include media($screen-sm-min)
+      padding-bottom: ($padding * 2)
+
+    &__icon
+      display: flex
+      justify-content: center
+      width: rem-calc(48)
+      height: rem-calc(48)
+      background-color: $color-4
+      box-shadow: $shadow
+      border-radius: 50%
+      
+      align-items: center
+
+      &:focus,
+      &:hover
+        opacity: 0.75
+
+      svg
+        width: rem-calc(24)
+        height: rem-calc(24)
