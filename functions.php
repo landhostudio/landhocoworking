@@ -3,6 +3,10 @@
   if (!function_exists('landhocoworking_setup')) {
 
     function landhocoworking_setup() {
+
+      // Enable HTML5 markup ---------------------------------------------------
+      
+      add_theme_support('html5', array('search-form', 'gallery', 'caption'));
       
       // Let WordPress manage the document title -------------------------------
 			
@@ -89,7 +93,7 @@
 
       get_template_part('inc/acf-gravity-forms/acf-gravity_forms');
       get_template_part('inc/acf');
-      
+
     }
 
   }
