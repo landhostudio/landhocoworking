@@ -202,3 +202,33 @@
       position: absolute
       bottom: 0
       background-color: $color-4
+  &--preview
+    .card__content
+      max-height: rem-calc(135)
+
+    &-md
+      @include media(min-width $screen-sm-min max-width $screen-md-max)
+        padding-bottom: per-width(16,9) + 6.25%
+
+        .card__image
+          position: relative
+          padding-bottom: per-width(16,9)
+          overflow: hidden
+          
+          img
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+
+    &-lg
+      @include media($screen-md-min)
+        padding-bottom: per-width(16,9) + 6.25%
+
+        .card__image
+          position: relative
+          padding-bottom: per-width(16,9)
+          overflow: hidden
+          
+          img
+            position: absolute
+            top: 50%
