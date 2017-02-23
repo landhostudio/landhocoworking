@@ -118,7 +118,7 @@ gulp.task('watch', function() {
     files: ['{template-pages,templates-parts,templates-sections,inc}/**/*.php', '*.php'],
     proxy: url,
     notify: false,
-    port: 8001,
+    port: 8002,
     ghostMode: {
       clicks: false,
       scroll: false,
