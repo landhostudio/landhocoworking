@@ -1,0 +1,13 @@
+.page
+
+  &__content
+    p + h1, ul + h1, ol + h1,
+    p + h2, ul + h2, ol + h2,
+    p + h3, ul + h3, ol + h3,
+    p + h4, ul + h4, ol + h4,
+    p + h5, ul + h5, ol + h5,
+    p + h6, ul + h6, ol + h6
+      margin-top: $padding
+
+      @include media($screen-sm-min)
+        margin-top: ($padding * 2)
