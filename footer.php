@@ -79,7 +79,7 @@
           <?php endif; ?>
 
           <div class="footer__copyright layout__xs__12 layout__sm__12 layout__md__12 layout__lg__12">
-            <small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>.</small>
+            <small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>.<?php if (get_field('options_privacy_title', option) || get_field('options_privacy_link', option)): ?> <a href="<?php the_field('options_privacy_link', option); ?>" target="_blank" rel="nofollow"><?php the_field('options_privacy_title', option); ?></a>.<?php endif; ?></small>
           </div>
         </div>
       </div>
