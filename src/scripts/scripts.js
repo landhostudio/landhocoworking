@@ -18,6 +18,10 @@
       initGoogleMaps();
     }
 
+    if ($('.cookies').length) {
+      initCookies();
+    }
+
   };
 
   function initHeader() {
@@ -345,6 +349,29 @@
       });
       
     });
+
+  };
+
+  function initCookies() {
+    
+    var cookies = Cookies.get('landhocoworking-cookies-accepted');
+
+    if (cookies == 1) {
+
+      $('.cookies').removeClass('cookies--not-accepted');
+
+    } else {
+
+      Cookies.set('landhocoworking-cookies-accepted', '0', {expires: 365});
+
+      $('.cookies').addClass('cookies--not-accepted');
+
+      $('.cookies .button--accept').click(function(event) {
+        $('.cookies').removeClass('cookies--not-accepted');
+        Cookies.set('landhocoworking-cookies-accepted', '1', {expires: 365});
+      });
+
+    };
 
   };
 

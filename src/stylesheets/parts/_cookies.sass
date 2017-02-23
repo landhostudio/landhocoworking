@@ -1,0 +1,33 @@
+.cookies
+  display: none
+
+  position: fixed
+  left: 0
+  bottom: 0
+  width: 100%
+  background-color: rgba($color-1, 0.96)
+  color: $color-4
+  padding-top: $padding
+  padding-bottom: $padding
+  box-shadow: $shadow
+  z-index: 99
+
+  &--not-accepted
+    display: block
+
+  .button
+    width: calc(100% - #{$padding * 2})
+    border-color: $color-4
+    background-color: transparent
+
+    @include media(max-width $screen-sm-max)
+      margin-top: ($padding / 2)
+
+    + .button
+      margin-top: ($padding / 4)
+      
+    &--inverted
+      background-color: $color-4
+
+  p
+    margin: 0
