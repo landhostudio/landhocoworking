@@ -51,6 +51,11 @@
       a
         display: block
         line-height: 0
+        transition: opacity 250ms
+
+        &:focus,
+        &:hover
+          opacity: $opacity
 
       img
         max-width: rem-calc(96)

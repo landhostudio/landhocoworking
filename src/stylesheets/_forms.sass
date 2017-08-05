@@ -23,6 +23,7 @@ button, input
   touch-action: manipulation
   line-height: $font-form-height
   box-sizing: content-box
+  transition: opacity 250ms
 
   svg
     width: rem-calc(24)
@@ -33,7 +34,7 @@ button, input
   
   &:focus,
   &:hover
-    opacity: 0.85
+    opacity: $opacity
 
   &--inverted
     background-color: $color-4

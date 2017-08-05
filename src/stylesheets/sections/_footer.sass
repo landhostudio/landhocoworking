@@ -55,11 +55,13 @@
         font-size: em-calc(10)
         padding-top: em-calc(16)
         padding-bottom: em-calc(16)
+        transition: opacity 250ms
+
+        &:focus,
+        &:hover
+          opacity: 0.5
 
   &__social
-    // TESTING
-    // background-color: $color-3
-
     display: flex
     flex-wrap: wrap
     
@@ -76,6 +78,11 @@
       margin-top: rem-calc(4)
       width: em-calc(24)
       height: em-calc(24)
+      transition: opacity 250ms
+
+      &:focus,
+      &:hover
+        opacity: $opacity
 
     svg
       width: em-calc(24)

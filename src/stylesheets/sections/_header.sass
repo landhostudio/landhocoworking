@@ -164,8 +164,13 @@
 
       a
         font-size: em-calc(10)
+        transition: opacity 250ms
 
         @include media(max-width $screen-sm-max)
           display: block
           padding-top: em-calc(16)
           padding-bottom: em-calc(16)
+
+        &:focus,
+        &:hover
+          opacity: $opacity
